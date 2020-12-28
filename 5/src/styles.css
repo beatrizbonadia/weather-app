@@ -1,0 +1,196 @@
+h1 {
+  position: relative;
+  text-align: center;
+  top: -6px;
+  font-weight: bolder;
+  font-size: 91px;
+  left: -4px;
+  font-family: "Montserrat", sans-serif;
+  color: #9d0191;
+}
+
+.dayTimeHour {
+  position: relative;
+  text-align: center;
+  top: -20px;
+  left: -3px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bolder;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  font-size: 129px;
+  font-weight: lighter;
+  top: -133px;
+  left: -53px;
+  color: #ffa62b;
+  font-family: "Heebo", sans-serif;
+}
+
+h3 {
+  position: relative;
+  text-align: center;
+  font-size: 60px;
+
+  top: -284px;
+  left: 52px;
+  color: #ffa62b;
+  font-family: "Heebo", sans-serif;
+}
+
+h5 {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  top: -296px;
+  left: 65px;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace;
+  color: #0e49b5;
+}
+
+.card {
+  max-width: 566px;
+  margin: 0 auto;
+  display: block;
+  max-height: 489px;
+  margin-top: 40px;
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+}
+
+form {
+  font-size: 20px;
+}
+.space {
+  margin: 2px;
+  width: 333px;
+  border-radius: 5px;
+  border: 1px;
+}
+
+.search {
+  width: 77px;
+  border-radius: 50px;
+  border: -1px thin;
+}
+
+.btn {
+  position: relative;
+  right: -427px;
+  top: -34px;
+  width: 122px;
+  border-radius: 50px;
+  border: -1px thin;
+}
+
+.temperature-unit {
+  position: relative;
+  right: -3px;
+  top: -35px;
+}
+
+.℃ {
+  width: 70px;
+  border-radius: 70px;
+  border: none;
+  background: #ffb6b6;
+  color: #150485;
+}
+
+.℉ {
+  width: 70px;
+  border-radius: 70px;
+  border: none;
+  color: #150485;
+}
+
+.nowEmoji {
+  position: relative;
+  font-size: 90px;
+  margin: -35px;
+  width: 10px;
+  left: 58px;
+  top: 26px;
+}
+
+.nowDescription {
+  position: relative;
+  left: 28px;
+  top: 34px;
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bolder;
+}
+
+hr {
+  position: relative;
+  left: 1px;
+  top: -402px;
+  font-size: 19px;
+  color: #0a043c;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  padding-left: 16px;
+  position: relative;
+  left: 1px;
+  top: -408px;
+  font-weight: bold;
+  color: #7c16c3;
+}
+
+.maxMin {
+  position: relative;
+  left: 219px;
+  top: -292px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  color: #ebe1ea;
+}
+
+.rain {
+  position: relative;
+  left: 421px;
+  top: -419px;
+  border: 1px solid #00587a;
+  width: 64px;
+  margin: 0 0 16px;
+  border-radius: 5px;
+  font-size: 17px;
+  background: #7d60ac;
+  color: white;
+  font-family: "Inconsolata", monospace;
+}
+
+.wind {
+  position: relative;
+  left: 423px;
+  top: -439px;
+  font-size: 16px;
+  border: 1px solid #00587a;
+  width: 99px;
+  border-radius: 5px;
+  background: #7d60ac;
+  color: white;
+  font-family: "Inconsolata", monospace;
+}
+
+.humidity {
+  position: relative;
+  left: 422px;
+  top: -429px;
+  font-size: 16px;
+  border: 1px solid #00587a;
+  width: 100px;
+  border-radius: 5px;
+  background: #7d60ac;
+  color: white;
+  font-family: "Inconsolata", monospace;
+}
