@@ -69,21 +69,24 @@ form {
   width: 333px;
   border-radius: 5px;
   border: 1px;
+  max-width: 274px;
 }
 
 .search {
   width: 77px;
   border-radius: 50px;
   border: -1px thin;
+  max-width: 150px;
 }
 
 .btn {
   position: relative;
-  right: -427px;
+  right: -380px;
   top: -34px;
   width: 122px;
   border-radius: 50px;
   border: -1px thin;
+  max-width: 122px;
 }
 
 .temperature-unit {
@@ -171,7 +174,7 @@ ul {
 
 .wind {
   position: relative;
-  left: 423px;
+  left: 402px;
   top: -439px;
   font-size: 16px;
   border: 1px solid #00587a;
@@ -184,7 +187,7 @@ ul {
 
 .humidity {
   position: relative;
-  left: 422px;
+  left: 401px;
   top: -429px;
   font-size: 16px;
   border: 1px solid #00587a;
