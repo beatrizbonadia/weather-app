@@ -197,3 +197,7 @@ ul {
   color: white;
   font-family: "Inconsolata", monospace;
 }
+
+small {
+  text-align: center;
+}
