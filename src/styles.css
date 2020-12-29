@@ -1,3 +1,10 @@
+.mainInfo {
+  position: relative;
+  text-align: center;
+  top: -26px;
+  left: -5px;
+}
+
 h1 {
   position: relative;
   text-align: center;
@@ -24,7 +31,7 @@ h2 {
   font-size: 129px;
   font-weight: lighter;
   top: -133px;
-  left: -53px;
+  left: -38px;
   color: #ffa62b;
   font-family: "Heebo", sans-serif;
 }
@@ -33,9 +40,8 @@ h3 {
   position: relative;
   text-align: center;
   font-size: 60px;
-
   top: -284px;
-  left: 52px;
+  left: 36px;
   color: #ffa62b;
   font-family: "Heebo", sans-serif;
 }
@@ -46,7 +52,7 @@ h5 {
   font-size: 16px;
   font-weight: normal;
   top: -296px;
-  left: 65px;
+  left: 53px;
   font-weight: bold;
   font-family: "Inconsolata", monospace;
   color: #0e49b5;
@@ -115,14 +121,14 @@ form {
   font-size: 90px;
   margin: -35px;
   width: 10px;
-  left: 58px;
-  top: 26px;
+  left: 79px;
+  top: 8px;
 }
 
 .nowDescription {
   position: relative;
-  left: 28px;
-  top: 34px;
+  left: -174px;
+  top: 7px;
   font-size: 18px;
   font-family: "Inconsolata", monospace;
   font-weight: bolder;
@@ -150,7 +156,7 @@ ul {
 
 .maxMin {
   position: relative;
-  left: 219px;
+  left: -1px;
   top: -292px;
   font-weight: bold;
   font-size: 20px;
