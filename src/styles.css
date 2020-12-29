@@ -199,5 +199,9 @@ ul {
 }
 
 small {
-  text-align: center;
+  text-align: left;
+  display: block;
+  margin: 0px auto;
+  max-width: 570px;
+  padding: 4px;
 }
