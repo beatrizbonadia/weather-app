@@ -1,7 +1,8 @@
 .mainInfo {
+  max-width: 530px;
   position: relative;
   text-align: center;
-  top: -26px;
+  top: -5px;
   left: -5px;
 }
 
@@ -62,7 +63,7 @@ h5 {
   max-width: 566px;
   margin: 0 auto;
   display: block;
-  max-height: 489px;
+  max-height: 454px;
   margin-top: 40px;
   background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 }
@@ -75,7 +76,7 @@ form {
   width: 333px;
   border-radius: 5px;
   border: 1px;
-  max-width: 274px;
+  max-width: 334px;
 }
 
 .search {
@@ -87,18 +88,19 @@ form {
 
 .btn {
   position: relative;
-  right: -380px;
-  top: -34px;
+  top: -33px;
+  left: -16px;
   width: 122px;
   border-radius: 50px;
   border: -1px thin;
   max-width: 122px;
+  padding: 2px;
 }
 
 .temperature-unit {
   position: relative;
   right: -3px;
-  top: -35px;
+  top: 2px;
 }
 
 .℃ {
@@ -107,6 +109,7 @@ form {
   border: none;
   background: #ffb6b6;
   color: #150485;
+  padding: 0;
 }
 
 .℉ {
@@ -114,6 +117,7 @@ form {
   border-radius: 70px;
   border: none;
   color: #150485;
+  padding: 0;
 }
 
 .nowEmoji {
