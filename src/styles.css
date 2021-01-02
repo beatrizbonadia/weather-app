@@ -71,30 +71,21 @@ h5 {
 form {
   font-size: 20px;
 }
-.space {
-  margin: 2px;
-  width: 333px;
-  border-radius: 5px;
-  border: 1px;
-  max-width: 334px;
-}
 
-.search {
+.btnOne {
   width: 77px;
   border-radius: 50px;
   border: -1px thin;
-  max-width: 150px;
+  max-width: 52px;
 }
 
 .btn {
-  position: relative;
-  top: -33px;
-  left: -16px;
   width: 122px;
   border-radius: 50px;
   border: -1px thin;
-  max-width: 122px;
+  max-width: 95px;
   padding: 2px;
+  height: 34px;
 }
 .temperature-unit {
   position: relative;
@@ -103,16 +94,15 @@ form {
 }
 
 .℃ {
-  width: 70px;
+  width: 34px;
   border-radius: 70px;
   border: none;
-  background: #ffb6b6;
   color: #150485;
   padding: 0;
 }
 
 .℉ {
-  width: 70px;
+  width: 34px;
   border-radius: 70px;
   border: none;
   color: #150485;
@@ -213,4 +203,33 @@ small {
   margin: 0px auto;
   max-width: 570px;
   padding: 4px;
+}
+
+.form-control {
+  margin: 2px;
+  width: 333px;
+  border-radius: 5px;
+  border: 1px;
+  max-width: 249px;
+}
+
+.searchCol {
+  padding-left: 46px;
+  margin-top: 3px;
+  padding-right: 0;
+}
+.celsiusCol {
+  padding-left: 17px;
+  margin-top: 3px;
+}
+.farCol {
+  padding-left: 7px;
+  margin-top: 3px;
+}
+
+.col-3 {
+  padding-left: 0px;
+  margin-top: 3px;
+  padding-right: 0;
+  max-width: 117px;
 }
