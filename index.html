@@ -26,14 +26,27 @@
 <div class="card">
     
 <form id="search-icon" >
-<input type="text" id="city" placeholder="Insert a city" autocomplete="off" class="space "  />
-<input type="submit" value="🔍" class="search " />
+    <div class="row">
+        <div class="col-5">
+<input type="text" id="city" placeholder="Insert a city" autocomplete="off" class="form-control"  />
+</div>
+<div class="col-2 searchCol">
+<input type="submit" value="🔍" class="btnOne btn-primary " />
+</div>
+<div class="col-3">
+    <button type="button" class="btn btn-warning float-right">📍 Location</button>
+</div>
+<div class="col-1 celsiusCol">
+<input type="submit" id="celsius" value="℃" class="℃ btn btn-light" />
+</div>
+<div class="col-1 farCol">
+<input type="submit" id="far" value="℉" class="℉ btn btn-light" />
+</div>
+</div>
 </form >
-<button type="button" class="btn btn-warning float-right">Your Location</button>
-<form class="temperature-unit" id="temperature-unit" >
-<input type="submit" id="celsius"  value="℃" class="℃"/>
-<input type="submit" id="far" value="℉" class="℉" />
-</form>
+
+
+
  
 <span class="mainInfo">
 <h1>Toronto</h1>
