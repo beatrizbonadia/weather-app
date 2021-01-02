@@ -1,6 +1,6 @@
 
-
-let now = new Date();
+function showDate(timestamp){
+let now = new Date(timestamp);
 
 let days =["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -10,9 +10,11 @@ let date = now.getDate();
 let year = now.getFullYear();
 let time = now.getHours();
 let min=now.getMinutes();
-let calendar=document.querySelector("#now-info");
-calendar.innerHTML=`${day}. ${month} ${date}/${year}, ${time}:${min} `;
-
+if (min<10){min=`0${min}`;}
+if (time<10){time=`0${time};`}
+return`${day}. ${month} ${date}/${year}, ${time}:${min} `;
+console.log(now);
+}
 
 
 
@@ -28,6 +30,9 @@ document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
 document.querySelector("#feels-like").innerHTML=Math.round(response.data.main.feels_like);
 document.querySelector("#min").innerHTML=Math.round(response.data.main.temp_min);
 document.querySelector("#max").innerHTML=Math.round(response.data.main.temp_max);
+let time= document.querySelector("#now-info");
+time.innerHTML=showDate(response.data.dt*1000);
+
 console.log(response);
 }
 
