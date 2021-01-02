@@ -13,9 +13,8 @@ let min=now.getMinutes();
 if (min<10){min=`0${min}`;}
 if (time<10){time=`0${time};`}
 return`${day}. ${month} ${date}/${year}, ${time}:${min} `;
-console.log(now);
-}
 
+}
 
 
 
@@ -33,7 +32,9 @@ document.querySelector("#max").innerHTML=Math.round(response.data.main.temp_max)
 let time= document.querySelector("#now-info");
 time.innerHTML=showDate(response.data.dt*1000);
 
-console.log(response);
+let emoji= document.querySelector("#emoji");
+emoji.getAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+console.log(emoji.getAttribute);
 }
 
 function searchCity(city){
