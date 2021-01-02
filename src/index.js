@@ -11,7 +11,7 @@ let year = now.getFullYear();
 let time = now.getHours();
 let min=now.getMinutes();
 if (min<10){min=`0${min}`;}
-if (time<10){time=`0${time};`}
+if (time<10){time=`0${time}`;}
 return`${day}. ${month} ${date}/${year}, ${time}:${min} `;
 
 }
@@ -33,8 +33,8 @@ let time= document.querySelector("#now-info");
 time.innerHTML=showDate(response.data.dt*1000);
 
 let emoji= document.querySelector("#emoji");
-emoji.getAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-console.log(emoji.getAttribute);
+ emoji.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
 }
 
 function searchCity(city){
