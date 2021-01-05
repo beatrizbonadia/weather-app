@@ -25,9 +25,10 @@ h2.innerHTML=`${temperature}`;
 document.querySelector("h1").innerHTML=response.data.name;
 document.querySelector("#now-description").innerHTML =response.data.weather[0].main;
 
-let celsiusTemp=response.data.main.temp;
- let minCelsius=response.data.main.temp_min;
- let maxCelsius=response.data.main.temp_max;
+celsiusTemp=response.data.main.temp;
+ minCelsius=response.data.main.temp_min;
+ maxCelsius=response.data.main.temp_max;
+ feelsTemp=Math.round(response.data.main.feels_like);
 
 document.querySelector("#humidity").innerHTML=response.data.main.humidity;
 document.querySelector("#wind").innerHTML=Math.round(response.data.wind.speed);
@@ -72,8 +73,17 @@ let lat =Math.round(position.coords.latitude);
 let lon =Math.round(position.coords.longitude);
 let unit ="metric";
 let url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${unit}&appid=${id}`;
+let celsiusIconTemp= document.querySelector("h3");
+celsiusIconTemp.innerHTML="℃";
+let celsiusIcon=document.querySelector("#℃");
+celsiusIcon.innerHTML="℃";
+let celsiusIconTwo=document.querySelector("#℃two");
+celsiusIconTwo.innerHTML="℃";
+let feelsIcon=document.querySelector("#feels-celsius");
+feelsIcon.innerHTML="℃";
+
 axios.get(url).then(giveCity);
-console.log(url);
+
 }
 
 function showFar(event){
@@ -86,16 +96,47 @@ temperature.innerHTML=Math.round(farConvert);
 let farIcon= document.querySelector("h3");
 farIcon.innerHTML="℉";
 let minTemp=document.querySelector("#min");
-minTemp.innerHTML=(minCelsius * 9) /5 + 32;
+minTemp.innerHTML=Math.round((minCelsius * 9) /5 + 32);
 let maxTemp=document.querySelector("#max");
-maxTemp.innerHTML=(maxCelsius * 9) /5 + 32;
-
-console.log(celsiusTemp);
+maxTemp.innerHTML=Math.round((maxCelsius * 9) /5 + 32);
+let celsiusIcon=document.querySelector("#℃");
+celsiusIcon.innerHTML="℉";
+let celsiusIconTwo=document.querySelector("#℃two");
+celsiusIconTwo.innerHTML="℉";
+let feelsLike=document.querySelector("#feels-like");
+feelsLike.innerHTML=Math.round((feelsTemp * 9) /5 + 32);
+let feelsIcon=document.querySelector("#feels-celsius");
+feelsIcon.innerHTML="℉";
 }
+
+
+function showCelsius(event){
+    event.preventDefault();
+let temperature=document.querySelector("h2");
+temperature.innerHTML=Math.round(celsiusTemp);
+let celsiusIconTemp= document.querySelector("h3");
+celsiusIconTemp.innerHTML="℃";
+let minTemp=document.querySelector("#min");
+minTemp.innerHTML=Math.round(minCelsius);
+let maxTemp=document.querySelector("#max");
+maxTemp.innerHTML=Math.round(maxCelsius);
+let celsiusIcon=document.querySelector("#℃");
+celsiusIcon.innerHTML="℃";
+let celsiusIconTwo=document.querySelector("#℃two");
+celsiusIconTwo.innerHTML="℃";
+let feelsLike=document.querySelector("#feels-like");
+feelsLike.innerHTML=Math.round(feelsTemp);
+let feelsIcon=document.querySelector("#feels-celsius");
+feelsIcon.innerHTML="℃";
+
+
+}
+
 
 let celsiusTemp=null;
 let minCelsius=null;
 let maxCelsius=null;
+let feelsTemp=null;
 
 
 
@@ -104,6 +145,7 @@ cityForm.addEventListener("submit", callCity);
 document.querySelector("button").addEventListener("click", givingPosition);
 let farButton = document.querySelector("#far");
 farButton.addEventListener("click", showFar);
-
+let celsiusButton = document.querySelector("#celsius");
+celsiusButton.addEventListener("click", showCelsius);
 
 searchCity("New York");
