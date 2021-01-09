@@ -1,5 +1,4 @@
 .mainInfo {
-  max-width: 530px;
   position: relative;
   text-align: center;
   top: -5px;
@@ -12,7 +11,7 @@ h1 {
   top: -6px;
   font-weight: bolder;
   font-size: 91px;
-  left: -4px;
+  left: 1px;
   font-family: "Montserrat", sans-serif;
   color: #9d0191;
 }
@@ -32,7 +31,7 @@ h2 {
   font-size: 129px;
   font-weight: lighter;
   top: -133px;
-  left: -38px;
+  left: -50px;
   color: #ffa62b;
   font-family: "Heebo", sans-serif;
 }
@@ -42,7 +41,7 @@ h3 {
   text-align: center;
   font-size: 60px;
   top: -284px;
-  left: 36px;
+  left: 53px;
   color: #ffa62b;
   font-family: "Heebo", sans-serif;
 }
@@ -53,14 +52,14 @@ h5 {
   font-size: 16px;
   font-weight: normal;
   top: -296px;
-  left: 53px;
+  left: 60px;
   font-weight: bold;
   font-family: "Inconsolata", monospace;
   color: #0e49b5;
 }
 
 .card {
-  max-width: 566px;
+  max-width: 465px;
   margin: 0 auto;
   display: block;
   max-height: 454px;
@@ -149,7 +148,7 @@ ul {
 
 .maxMin {
   position: relative;
-  left: -1px;
+  left: -7px;
   top: -292px;
   font-weight: bold;
   font-size: 20px;
@@ -159,7 +158,7 @@ ul {
 
 .rain {
   position: relative;
-  left: 421px;
+  left: 335px;
   top: -419px;
   border: 1px solid #00587a;
   width: 64px;
@@ -173,7 +172,7 @@ ul {
 
 .wind {
   position: relative;
-  left: 402px;
+  left: 335px;
   top: -439px;
   font-size: 16px;
   border: 1px solid #00587a;
@@ -186,7 +185,7 @@ ul {
 
 .humidity {
   position: relative;
-  left: 401px;
+  left: 335px;
   top: -429px;
   font-size: 16px;
   border: 1px solid #00587a;
@@ -201,29 +200,29 @@ small {
   text-align: left;
   display: block;
   margin: 0px auto;
-  max-width: 570px;
+  max-width: 473px;
   padding: 4px;
 }
 
 .form-control {
   margin: 2px;
-  width: 333px;
+  width: 218px;
   border-radius: 5px;
   border: 1px;
   max-width: 249px;
 }
 
 .searchCol {
-  padding-left: 46px;
+  padding-left: 34px;
   margin-top: 3px;
   padding-right: 0;
 }
 .celsiusCol {
-  padding-left: 17px;
+  padding-left: 5px;
   margin-top: 3px;
 }
 .farCol {
-  padding-left: 7px;
+  padding-left: 2px;
   margin-top: 3px;
 }
 
@@ -231,5 +230,26 @@ small {
   padding-left: 0px;
   margin-top: 3px;
   padding-right: 0;
-  max-width: 117px;
+  max-width: 109px;
+}
+
+.forecast {
+  max-width: 481px;
+  padding-left: 0px;
+  margin-top: -412px;
+  padding-right: 0;
+}
+
+h6 {
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.iconForecast {
+  max-width: 52px;
+}
+
+.forecast-temperature {
+  padding-left: 4px;
+  font-size: 14px;
 }

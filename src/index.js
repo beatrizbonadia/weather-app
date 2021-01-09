@@ -1,19 +1,25 @@
 
 function showDate(timestamp){
-let now = new Date(timestamp);
 
+let now = new Date(timestamp);
 let days =["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 let day= days[now.getDay()];
 let month=months[now.getMonth()];
 let date = now.getDate();
 let year = now.getFullYear();
+
+return`${day}. ${month} ${date}/${year}, ${formatHours(timestamp)} `;
+
+}
+
+function formatHours(timestamp){
+let now = new Date(timestamp);
 let time = now.getHours();
 let min=now.getMinutes();
 if (min<10){min=`0${min}`;}
 if (time<10){time=`0${time}`;}
-return`${day}. ${month} ${date}/${year}, ${time}:${min} `;
-
+    return `${time}:${min}`;
 }
 
 
@@ -41,14 +47,43 @@ time.innerHTML=showDate(response.data.dt*1000);
 let emoji= document.querySelector("#emoji");
  emoji.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  
+ 
 
 }
+
+function giveForecast(response){
+    console.log(response.data.list[0]);
+    let forecastList= document.querySelector("#forecast");
+    forecastList.innerHTML=null;
+    let forecastResponse=null;
+
+    
+    for (let index = 0; index < 6; index++) {
+forecastResponse=response.data.list[index];
+          forecastList.innerHTML +=`<div class="col-2">
+<h6>${formatHours(forecastResponse.dt*1000)}</h6>
+<img src="http://openweathermap.org/img/wn/${forecastResponse.weather[0].icon}@2x.png" class="iconForecast">
+<p class="forecast-temperature"> <strong>${Math.round(forecastResponse.main.temp_max)}° </strong> ${Math.round(forecastResponse.main.temp_min)}°
+    </p>
+</div>
+</div>`;
+        
+    }
+  
+}
+
 
 function searchCity(city){
 let unit ="metric";
 let id="e3344368d6f3c228b3b3ea166c8bbbdf";
 let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${id}`;
 axios.get(url).then(giveCity);
+
+
+let apiUrl=`https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=${unit}&appid=${id}`;
+
+axios.get(apiUrl).then(giveForecast);
+
 
 }
 
