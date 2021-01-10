@@ -9,7 +9,7 @@ let month=months[now.getMonth()];
 let date = now.getDate();
 let year = now.getFullYear();
 
-return`${day}. ${month} ${date}/${year}, ${formatHours(timestamp)} `;
+return`${day}. ${month} ${date}/${year}, ${formatHours(timestamp)}; `;
 
 }
 
@@ -44,6 +44,8 @@ document.querySelector("#max").innerHTML=Math.round(response.data.main.temp_max)
 let time= document.querySelector("#now-info");
 time.innerHTML=showDate(response.data.dt*1000);
 
+
+
 let emoji= document.querySelector("#emoji");
  emoji.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  
@@ -52,7 +54,7 @@ let emoji= document.querySelector("#emoji");
 }
 
 function giveForecast(response){
-    console.log(response.data.list[0]);
+    
     let forecastList= document.querySelector("#forecast");
     forecastList.innerHTML=null;
     let forecastResponse=null;
@@ -102,7 +104,6 @@ function givingPosition(event){
 }
 
 function giveMyLocation(position){
-    console.log(position);
 let id ="e3344368d6f3c228b3b3ea166c8bbbdf";
 let lat =Math.round(position.coords.latitude);
 let lon =Math.round(position.coords.longitude);
@@ -118,6 +119,9 @@ let feelsIcon=document.querySelector("#feels-celsius");
 feelsIcon.innerHTML="℃";
 
 axios.get(url).then(giveCity);
+
+let apiUrl=`https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&units=${unit}&appid=${id}`;
+axios.get(apiUrl).then(giveForecast);
 
 }
 
