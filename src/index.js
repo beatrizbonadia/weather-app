@@ -93,7 +93,7 @@ axios.get(apiUrl).then(giveForecast);
 function callCity (event){
 event.preventDefault();
 let city=document.querySelector("#city").value;
-
+console.log(event);
 
 searchCity(city);
 }
